@@ -1,0 +1,9 @@
+*.exe
+*.pyc
+*.pyd
+
+# clang
+/clang_2026/guides
+
+# builds
+build
