@@ -1,0 +1,5 @@
+| Operation          | Complexity |
+| ------------------ | ---------- |
+| enumerate creation | O(1)       |
+| Full iteration     | O(n)       |
+| Memory             | O(1) extra |
