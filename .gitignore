@@ -1,9 +1,17 @@
 *.exe
 *.pyc
 *.pyd
+*.bin       
+*.pkl
+
+# config
+.vscode
 
 # clang
 /clang_2026/guides
 
 # builds
 build
+
+# ai-notes
+gemini
