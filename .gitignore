@@ -3,9 +3,15 @@
 *.pyd
 *.bin       
 *.pkl
+*.venv
+*.idea
+__pycache__
+.pytest_cache
+.ruff_cache
 
-# config
+# config & context
 .vscode
+.claude
 
 # clang
 /clang_2026/guides
@@ -13,5 +19,15 @@
 # builds
 build
 
-# ai-notes
+# ai-notes & logs
 gemini
+CLAUDE.md
+
+# other dirs and files
+*linux_commands
+0x_c_extension
+books
+cloud
+0x_problems
+template-rules.md
+ml-types.md
