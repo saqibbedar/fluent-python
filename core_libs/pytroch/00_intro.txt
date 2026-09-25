@@ -1,0 +1,25 @@
+Pytorch has mainly five organs:
+
+1. Tensor: The basic data structure in PyTorch, similar to NumPy arrays but with additional capabilities for GPU acceleration.
+
+2. Autograd: PyTorch's automatic differentiation engine that allows for easy computation of gradients, which is essential for training neural networks.
+
+3. nn: A high-level module that provides a wide range of pre-built layers, loss functions, and optimizers for building and training neural networks.
+
+4. Loss Function: A function that measures the difference between the predicted output of a model and the actual target values, guiding the optimization process during training.
+
+5. Optimizer: A module that implements various optimization algorithms (like SGD, Adam, etc.) to update the model's parameters based on the computed gradients during training.
+
+Overall pipeline:
+
+    1. Load data
+    2. Send batch to model
+    3. Model makes predictions
+    4. Compare predictions with true labels
+    5. Compute loss
+    6. Backpropagate loss
+    7. Optimizer updates weights
+    8. Repeat many times
+    9. Test on unseen data
+    10. Save trained model
+
