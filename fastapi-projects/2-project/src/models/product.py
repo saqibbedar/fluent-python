@@ -1,6 +1,7 @@
 # pydantic is validator for the data used to define the specs or interfaces
 from pydantic import BaseModel
 
+
 class Product(BaseModel):
     id: int
     name: str

@@ -1,8 +1,4 @@
-data = {
-    "a": 100,
-    "b": 200,
-    "c": 300
-}
+data = {"a": 100, "b": 200, "c": 300}
 
 for index, key in enumerate(data):
     print(index, key)
@@ -12,7 +8,7 @@ for index, key in enumerate(data):
 # 1 b
 # 2 c
 
-print(f"{"Index":<10} | {"Key":<10} | {"Value"}")
+print(f"{'Index':<10} | {'Key':<10} | {'Value'}")
 for i, (k, v) in enumerate(data.items()):
     print(f"{i:<10} | {k:<10} | {v}")
 

@@ -1,6 +1,6 @@
 numList = [10, 20, 30]
 
-print(f"{" Tuples ".center(36, "=")}")
+print(f"{' Tuples '.center(36, '=')}")
 for num in enumerate(numList):
     print(num)
 
@@ -13,7 +13,7 @@ for num in enumerate(numList):
 """
 
 # accessing values separate, index, and actual entry at index
-print(f" Debug ".center(36, "="))
+print(" Debug ".center(36, "="))
 for i, num in enumerate(numList):
     print(f"{i=}, {num=}")
 

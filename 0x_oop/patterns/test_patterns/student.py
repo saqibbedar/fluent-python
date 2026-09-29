@@ -9,4 +9,3 @@ class Student:
 
     def upgrade_grade(self) -> None:
         self.grade += 1
-

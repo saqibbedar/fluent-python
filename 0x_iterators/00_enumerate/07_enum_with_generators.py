@@ -2,9 +2,11 @@
 
 # They are useful when working with large datasets, streams of data, or sequences that could be infinite.
 
+
 def square():
     for i in range(5):
-        yield i*i
+        yield i * i
+
 
 for idx, value in enumerate(square()):
     print(idx, value)

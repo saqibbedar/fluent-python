@@ -1,23 +1,24 @@
 """
-    y_hat is prediction done by our algorithm, it is defined as:
-        
-        y_hat = (w.phi(x))
-    
-    # Losses: Measures how wrong predictor predicts
-        In our course, we took Residual but in ML approach they call it as error (i.e., in prediction)
+y_hat is prediction done by our algorithm, it is defined as:
 
-        Residual = (y_hat - true_y) # statistical
-        Error = (true_y - y_hat) # ML approach
+    y_hat = (w.phi(x))
 
-        SquaredLoss: Used in linear regression to flip the sings and there are other advantages too
+# Losses: Measures how wrong predictor predicts
+    In our course, we took Residual but in ML approach they call it as error (i.e., in prediction)
 
-        SquaredLoss = (Residual)^2 or (y_hat - true_y)^2 
+    Residual = (y_hat - true_y) # statistical
+    Error = (true_y - y_hat) # ML approach
+
+    SquaredLoss: Used in linear regression to flip the sings and there are other advantages too
+
+    SquaredLoss = (Residual)^2 or (y_hat - true_y)^2
 """
 
-x = [3,4]
+x = [3, 4]
 w = [0.5, -1.5]
 
-true_y = int(input("What's true_y? ")) # get y input
+true_y = int(input("What's true_y? "))  # get y input
+
 
 # find margin/score w.phi(x) where phi(x) = array of x or feature vectors
 def score(feature_vectors, weights):
@@ -27,15 +28,19 @@ def score(feature_vectors, weights):
 
     return result
 
+
 y_hat = score(x, w)
+
 
 # Find residual
 def residual(y_hat, true_y):
-    return (y_hat - true_y)
+    return y_hat - true_y
+
 
 # Find Squared Loss
 def squared_loss(residual):
     return (residual) ** 2
+
 
 # loss computation
 r = residual(y_hat, true_y)

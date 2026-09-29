@@ -4,16 +4,19 @@ from src.schemas import ApiResponse
 
 app = FastAPI()
 
+
 # test api
 @app.get("/")
 def home():
     return "Homepage"
 
+
 products = [
     Product(id=1, name="Phone", description="Budget Phone", price=499.9, quantity=100),
     Product(id=2, name="Laptop", description="Gaming Laptop", price=999.9, quantity=35),
-    Product(id=3, name="Laptop", description="Gaming Laptop", price=999.9, quantity=35)
+    Product(id=3, name="Laptop", description="Gaming Laptop", price=999.9, quantity=35),
 ]
+
 
 # return all products
 @app.get("/products")
@@ -27,7 +30,7 @@ def get_all_products():
 def get_product_by_id(id: int):
     for p in products:
         if p.id == id:
-            return p    
+            return p
 
     raise HTTPException(status_code=404, detail="Product not found")
 

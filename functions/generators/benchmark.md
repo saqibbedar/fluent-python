@@ -36,13 +36,16 @@ def data_generator():
 unpack_time = timeit.timeit("[*data_generator()]", setup=setup_code, number=1000)
 list_time = timeit.timeit("list(data_generator())", setup=setup_code, number=1000)
 
-loop_setup = setup_code + """
+loop_setup = (
+    setup_code
+    + """
 def manual_loop():
     result = []
     for item in data_generator():
         result.append(item)
     return result
 """
+)
 
 loop_time = timeit.timeit("manual_loop()", setup=loop_setup, number=1000)
 

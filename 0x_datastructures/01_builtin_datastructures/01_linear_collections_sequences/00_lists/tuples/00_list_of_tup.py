@@ -2,7 +2,7 @@
 
 lst_tup = [
     ("Saqib Bedar", 22, 5.4, "Islamabad", "Pakistan"),
-    ("John Doe", 40, 5.8, "unknown", "Some-country")
+    ("John Doe", 40, 5.8, "unknown", "Some-country"),
 ]
 
 for tup in lst_tup:
@@ -13,7 +13,7 @@ for tup in lst_tup:
 # ('John Doe', 40, 5.8, 'unknown', 'Some-country')
 
 # destructing: unpacking directly inside loop
-print(f"{"Name":<15} | {"Age":<6} | {"Height":<6} | {"City":<15} | {"Country"}")
+print(f"{'Name':<15} | {'Age':<6} | {'Height':<6} | {'City':<15} | {'Country'}")
 print("-" * 70)
 
 for tup in lst_tup:

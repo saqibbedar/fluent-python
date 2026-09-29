@@ -4,10 +4,10 @@ Range iterator: It stores only three integers that's why its memory efficient:
     stop=1000
     step=1
 
-    syntax: range(start, stop, step) this is equivalent to an object like 
+    syntax: range(start, stop, step) this is equivalent to an object like
 
     class myrange:
-        
+
         def __init__(self, start : int = 0, stop : int, step : int = 1) -> None:
             self.start = start
             self.stop = stop
@@ -17,17 +17,17 @@ Range iterator: It stores only three integers that's why its memory efficient:
 
 Quick facts:
 
-    1. If we pass single value then it is stop value 
-        
+    1. If we pass single value then it is stop value
+
         for i in range(5)       # here 5 is stop value, it stops before 5, range automatically set start = 0
 
-        Mathematically: [0, 5)      
-        
+        Mathematically: [0, 5)
+
         Inclusive start and Exclusive stop
 
         0 included       |  5 excluded
 
-    
+
     2. range(3, 8)          # start from 3 and stop before 8
 
         output: 3, 4, 5, 6, 7
@@ -42,7 +42,7 @@ Quick facts:
 
         output: 2, 4, 6, 8
 
-        internally: start += 2 
+        internally: start += 2
         And condition is checked against stop is (current >= stop)
 
 
@@ -62,12 +62,12 @@ Quick facts:
         4
         3
         2
-        1  
+        1
 
         (0 not printed because at 0 it has to be stopped)
 
 
-        
+
         for i in range(10, -1, -1)
             print(i)
 
@@ -86,6 +86,6 @@ Quick facts:
 
         why 0? because -1 is stop value so it has keep iterate until it is checked against the stop value
 
-        
+
 
 """

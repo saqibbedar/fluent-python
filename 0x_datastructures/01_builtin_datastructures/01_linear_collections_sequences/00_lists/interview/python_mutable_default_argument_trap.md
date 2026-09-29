@@ -457,9 +457,7 @@ print(m)
 produces:
 
 ``` python
-[[0, 0, 0, 99],
- [0, 0, 0, 99],
- [0, 0, 0, 99]]
+[[0, 0, 0, 99], [0, 0, 0, 99], [0, 0, 0, 99]]
 ```
 
 Again, only **one list** was modified.
@@ -629,8 +627,7 @@ b ──┘
 ### Mutable default argument
 
 ``` python
-def f(x=[]):
-    ...
+def f(x=[]): ...
 ```
 
 Multiple calls without an explicit argument reuse the same default list.

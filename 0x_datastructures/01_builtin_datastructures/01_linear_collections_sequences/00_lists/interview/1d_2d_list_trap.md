@@ -231,9 +231,7 @@ x[2] ──┘
 Therefore, `print(x)` gives:
 
 ```py
-[[0, 99, 0],
- [0, 99, 0],
- [0, 99, 0]]
+[[0, 99, 0], [0, 99, 0], [0, 99, 0]]
 ```
 
 It looks like three rows changed, but only one list changed. All three outer positions were pointing at it.

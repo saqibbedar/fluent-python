@@ -72,6 +72,7 @@ def huge_numbers():
     for i in range(1_000_000):
         yield i
 
+
 all_values = [*huge_numbers()]
 ```
 
@@ -94,6 +95,7 @@ def infinite_counter():
     while True:
         yield n
         n += 1
+
 
 first_five = [*islice(infinite_counter(), 5)]
 print(first_five)
@@ -118,6 +120,7 @@ from itertools import islice
 
 def huge_generator():
     return (x for x in range(100_000))
+
 
 iterator = huge_generator()
 
