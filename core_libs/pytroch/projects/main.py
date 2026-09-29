@@ -1,19 +1,20 @@
 # 1. Load and Transform the Data
-import torch
 import torch.nn as nn
 import torch.optim as optim
 from torch.utils.data import DataLoader
 from torchvision import datasets, transforms
 
 # Define a transform to normalize the data
-transform = transforms.Compose([
-    transforms.ToTensor(),
-    transforms.Normalize((0.1307,), (0.3081,)) # MNIST mean and std dev
-])
+transform = transforms.Compose(
+    [
+        transforms.ToTensor(),
+        transforms.Normalize((0.1307,), (0.3081,)),  # MNIST mean and std dev
+    ]
+)
 
 # Download and load the training and test data
-train_dataset = datasets.MNIST(root='./data', train=True, download=True, transform=transform)
-test_dataset = datasets.MNIST(root='./data', train=False, download=True, transform=transform)
+train_dataset = datasets.MNIST(root="./data", train=True, download=True, transform=transform)
+test_dataset = datasets.MNIST(root="./data", train=False, download=True, transform=transform)
 
 train_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)
 test_loader = DataLoader(test_dataset, batch_size=1000, shuffle=False)
@@ -26,7 +27,7 @@ class MNISTNetwork(nn.Module):
         self.flatten = nn.Flatten()
         self.fc1 = nn.Linear(28 * 28, 128)
         self.relu = nn.ReLU()
-        self.fc2 = nn.Linear(128, 10) # 10 output classes (digits 0-9)
+        self.fc2 = nn.Linear(128, 10)  # 10 output classes (digits 0-9)
 
     def forward(self, x):
         x = self.flatten(x)
@@ -34,6 +35,7 @@ class MNISTNetwork(nn.Module):
         x = self.relu(x)
         x = self.fc2(x)
         return x
+
 
 model = MNISTNetwork()
 
@@ -50,6 +52,6 @@ for batch_idx, (data, target) in enumerate(train_loader):
     loss = criterion(output, target)
     loss.backward()
     optimizer.step()
-    
+
     if batch_idx % 200 == 0:
         print(f"Batch {batch_idx}/{len(train_loader)} - Loss: {loss.item():.4f}")

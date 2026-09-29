@@ -1,9 +1,10 @@
-from src.core import DATA_DIR
 import json
+
+from src.core import DATA_DIR
+
 
 # json based
 class ProductRepository:
-
     # 1. get all products, read data from data/data.json file and return json data
     def get_all(self) -> list | None:
 
@@ -17,7 +18,7 @@ class ProductRepository:
             return payload
         else:
             return None
-            
+
     # 2. get a product by an id
     def get_by_id(self, id: int) -> dict | None:
 
@@ -32,17 +33,17 @@ class ProductRepository:
 
             # find product by id
             for item in payload:
-                if item['id'] == id:
+                if item["id"] == id:
                     return item
         else:
-            return None    
-        
+            return None
+
     # 3. search product
     def get_by_query(self, q: str) -> list | None:
-        
+
         # lowercase query
         q = q.lower()
-        
+
         payload = None
 
         if DATA_DIR:
@@ -60,17 +61,18 @@ class ProductRepository:
                 price = str(item["price"])
 
                 # filter products
-                if (q in id or
-                    q in price or
-                    q in item["name"].lower() or
-                    q in item["description"].lower() or
-                    q in item["category"].lower()):
+                if (
+                    q in id
+                    or q in price
+                    or q in item["name"].lower()
+                    or q in item["description"].lower()
+                    or q in item["category"].lower()
+                ):
                     products.append(item)
 
             return products
 
         else:
-
             return None
 
     # 4. product with pagination
@@ -95,19 +97,20 @@ class ProductRepository:
                 price = str(item["price"])
 
                 # filter products
-                if (q in id or
-                    q in price or
-                    q in item["name"].lower() or
-                    q in item["description"].lower() or
-                    q in item["category"].lower()):
-
+                if (
+                    q in id
+                    or q in price
+                    or q in item["name"].lower()
+                    or q in item["description"].lower()
+                    or q in item["category"].lower()
+                ):
                     products.append(item)
 
             return {
                 "total_matches": len(products),
                 "skip": skip,
                 "limit": limit,
-                "results": products[skip:skip+limit] if len(products) > 10 else products
+                "results": products[skip : skip + limit] if len(products) > 10 else products,
             }
 
         else:

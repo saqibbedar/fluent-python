@@ -1,5 +1,4 @@
 from pathlib import Path
-import json
 
 # Get absolute path *this file
 core_dir = Path(__file__).resolve().parent

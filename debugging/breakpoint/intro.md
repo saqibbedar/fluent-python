@@ -6,9 +6,9 @@ Place breakpoint() right before the point of confusion:
 
 ```py
 def floor_division(a: int, b: int) -> int:
-    
-    breakpoint()        # Execution pauses here
-    
+
+    breakpoint()  # Execution pauses here
+
     if b == 0:
         raise ZeroDivisionError
     return a // b

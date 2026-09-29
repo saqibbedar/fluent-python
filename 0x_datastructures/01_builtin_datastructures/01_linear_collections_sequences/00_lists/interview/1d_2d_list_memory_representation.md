@@ -79,11 +79,7 @@ x
 A 2D list is just a list of lists.
 
 ```py
-x = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9]
-]
+x = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 ```
 
 At the memory level, the outer list points to three inner lists. Each inner list then points to its own elements.

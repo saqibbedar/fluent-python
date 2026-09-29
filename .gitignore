@@ -3,31 +3,18 @@
 *.pyd
 *.bin       
 *.pkl
-*.venv
-*.idea
-__pycache__
-.pytest_cache
-.ruff_cache
 
-# config & context
-.vscode
-.claude
+**/.vscode/
+**/.claude/
+**/.idea/
+**/.venv/
+**/build/
+**/__pycache__/
+**/.pytest_cache/
+**/.ruff_cache/
+**/.logs/
+**/.tmp/
 
-# clang
-/clang_2026/guides
-
-# builds
-build
-
-# ai-notes & logs
-gemini
-CLAUDE.md
-
-# other dirs and files
-*linux_commands
-0x_c_extension
-books
-cloud
-0x_problems
-template-rules.md
-ml-types.md
+# fastapi/x-project/data 
+fastapi-projects/**/data/*.csv
+fastapi-projects/**/data/*.json

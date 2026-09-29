@@ -1,22 +1,25 @@
 """
-    The Perceptron update rule:
+The Perceptron update rule:
 
-    1. Compute the score (margin): m = w⋅x
-    2. Predict: y_hat = sign(m)
-    3. If prediction is wrong (y_hat != true_y), then update: w ← w + yx
+1. Compute the score (margin): m = w⋅x
+2. Predict: y_hat = sign(m)
+3. If prediction is wrong (y_hat != true_y), then update: w ← w + yx
 """
 
 x = [1, 1]
 y = -1
 w = [0, 0]
 
+
 # Compute margin
 def score(x, w):
     return sum(xi * wi for xi, wi in zip(x, w))
 
+
 # Predict y_hat
 def predict(x, w):
     return 1 if score(x, w) >= 0 else -1
+
 
 # Perceptron update
 max_iters = 10

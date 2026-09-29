@@ -16,10 +16,10 @@ data_dir = (project_root / "data").resolve()
 json_files: list = []
 csv_files: list = []
 
+
 # ls: list dir and files and generate useful info of data dir
 def metadata_data_generator():
     if data_dir.is_dir():
-        
         print(f"\n> ls {data_dir}\n")
         # .iterdir() yields Path objects one by one
         for item in data_dir.iterdir():
@@ -44,6 +44,7 @@ def metadata_data_generator():
     else:
         # display error in-case if its not a directory
         print(f"Error: No data directory found at {data_dir}\nFix: check core/data.py to fix the error")
+
 
 metadata_data_generator()
 

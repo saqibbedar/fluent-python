@@ -8,10 +8,11 @@ Actual python that caused the error:
 from src.core import JSON_DATA_FILE_PATH
 import json
 
+
 class ProductRepository:
     # 1. get all products
     def get_all(self) -> dict | None:
-        
+
         payload = None
 
         if JSON_DATA_FILE_PATH:
@@ -24,12 +25,10 @@ class ProductRepository:
             # print(payload[1:5])
             # print("-"*25)
 
-            return {
-                "total_products": len(payload),
-                "products": payload
-            }
+            return {"total_products": len(payload), "products": payload}
         else:
             return None
+
 
 # Debugging
 product = ProductRepository()

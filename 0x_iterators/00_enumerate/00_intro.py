@@ -43,9 +43,9 @@ Def: enumerate() is one of Python's most useful built-in functions. It lets you 
 
     for i, item in enumerate(["a", "b", "c"], start=-3):
         print(i, item)
-    
+
     Output:
-        
+
         -3 a
         -2 b
         -1 c
@@ -70,11 +70,11 @@ Def: enumerate() is one of Python's most useful built-in functions. It lets you 
         for item in iterable:
             yield (n, item)
             n += 1
-    
+
     list(custom_enumerate(["a", "b", "c"]))
 
-    output: [(0, 'a'), (1, 'b'), (2, 'c')]      # it return array of tuple so 
-    
+    output: [(0, 'a'), (1, 'b'), (2, 'c')]      # it return array of tuple so
+
     for tup in enumerate(iterable):
         print(tup)
 
