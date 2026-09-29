@@ -3,7 +3,7 @@ def floor_division(a: int, b: int) -> int:
     breakpoint()        # Execution pauses here
     
     if b == 0:
-        raise ZeroDivisionError()
+        raise ZeroDivisionError("Cannot divide a number by zero.")
     return a // b
 
 try:
