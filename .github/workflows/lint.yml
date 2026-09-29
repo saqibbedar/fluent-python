@@ -1,0 +1,27 @@
+# CI Script for Code maintenance
+name: Code Quality Check
+
+on:
+  pull_request:
+    branches: [ main ]
+  push:
+    branches: [ main ]
+
+jobs:
+  lint-and-format:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up uv & Python
+        uses: astral-sh/setup-uv@v5
+        with:
+          python-version: "3.14"
+          enable-cache: true
+
+      - name: Check Code Linting & Syntax Errors
+        run: uvx ruff check .
+
+      - name: Verify Formatting Styles
+        run: uvx ruff format --check .
