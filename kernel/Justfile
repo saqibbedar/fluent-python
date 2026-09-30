@@ -1,0 +1,7 @@
+task1:
+    uv run python src/task1.py
+
+task2:
+    uv run python src/task2.py
+main:
+    uv run python main.py
