@@ -4,6 +4,7 @@ from pathlib import Path
 curr_file_path = Path(__file__).resolve()
 pyproject_file_path = (curr_file_path.parent / "pyproject.toml").resolve()
 
+
 # read dependencies
 def get_dependencies():
     if not pyproject_file_path.exists():
@@ -17,10 +18,8 @@ def get_dependencies():
     deps = project_table.get("dependencies", [])
     dep_groups = config.get("dependency-groups", {})
 
-    return {
-        "dependencies": deps,
-        "dependency-groups": dep_groups
-    }
+    return {"dependencies": deps, "dependency-groups": dep_groups}
+
 
 def main():
     try:
