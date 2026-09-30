@@ -1,0 +1,23 @@
+[project]
+name = "kernel"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Saqib Bedar", email = "124094939+saqibbedar@users.noreply.github.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "numpy>=2.5.3",
+    "pandas>=3.0.6",
+]
+
+[dependency-groups]
+dev = [
+    "poethepoet",
+]
+
+[tool.poe.tasks]
+main  = "python main.py"
+task1 = "python src/task1.py"
+task2 = "python src/task2.py"
