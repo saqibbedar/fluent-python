@@ -1,32 +1,71 @@
 # Fluent Python
 
-This repository covers massive Python topics, organized in proper folder structure. Anyone interested in learning Python can find this helpful. Constantly, it is being updated with highly documented notebooks that makes it so easy for you to learn Python's any topic.
+A comprehensive, hands-on repository dedicated to learning and mastering modern Python. This repository provides structured code examples, deep dives, and documented Jupyter notebooks across core language constructs, design patterns, standard library modules, and practical applications.
 
-> ⚠️ Important Note: As repository is continuously updating, so contents will be restructured on fly. Any discrepancy will subject to removal. Current folder structure is not fixed—with daily changes the things can go here and there for absolute optimized repository for learning Python.
+> **Work in Progress (WIP):** This repository is under active development and continuously expanding. File paths, folder structure, and topics may be shuffled or refactored as the repository is normalized.
 
-# Ultimate Goal
+---
 
-After the work is finished, this repository will serve a quick learning hub for any body who wants to master the Python, its design patterns through properly documented notebooks. And, final conversion will be a website that will make it even more easy for you to learn anything about Python systematically and steptistically.  
+## Scope and Covered Topics
 
-# Folder structure
+The repository is organized modularly by concept and domain:
 
-Currently, folder structure is a bit weird as I have `0x_` prefix which will be refactored once all major topics are covered and and organized orderly.
+- **Language Fundamentals**: Basics, functions, exceptions, and file handling.
+- **Data Structures**: Detailed coverage of built-in types (strings, bytes, bytearrays, lists, dicts, sets, tuples) and advanced collections.
+- **Pythonic Patterns**: Comprehensions, iterators, generators, and closures.
+- **Object-Oriented Programming (OOP)**: Classes, inheritance, polymorphism, and special dunder methods.
+- **Standard Library & Core Modules**: Modules such as `pathlib`, `datetime`, `subprocess`, and locale management.
+- **Projects & Frameworks**: Practical applications including FastAPI projects.
+- **Tooling & Automation**: Maintenance scripts, local quality runners, and CI checks.
 
-# Getting Started
+---
 
-You can start exploring the repository locally, or you can add your programs, too, in `/contributors` directory. If not exist then do create it and push your code inside it. This will help us to maintain the main code and contributors code easily and inject any topic to any directory on purpose.
+## Getting Started
 
-Here is how to clone and get started fully on your local machine.
+### Prerequisites
+
+- Python 3.12+ (Python 3.14 used in kernel environment)
+- [`uv`](https://docs.astral.sh/uv/) for package and tool management
+- [`just`](https://github.com/casey/just) command runner
+
+### Setup
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/saqibbedar/fluent-python.git
+   cd fluent-python
+   ```
+
+2. Open the project in your editor of choice (e.g., VS Code, PyCharm, or JupyterLab).
+
+---
+
+## Code Quality
+
+All Python scripts and notebooks are checked and formatted using [Ruff](https://docs.astral.sh/ruff/).
+
+To run linting, formatting, and auto-fixes across all modified and untracked files:
 
 ```bash
-git clone https://github.com/saqibbedar/fluent-python.git
-cd fluent-python && code .          # && code . is vs code command, if you don't use it to then skip it and open folder manually or use IDE of your choice, i.e., PyCharm etc.
+just code_quality
 ```
 
-# Contributions
+Logs are generated in `.logs/ruff.txt`. Code quality checks run automatically on every pull request via GitHub Actions.
 
-As like always, contributions are heart of any repository. So, you are invited and welcomed, even help in documentation is a big contribution and any flaw you find in existing code or anything you have to share fell free to add on. You are superbly welcomed.
+---
 
-# LICENSE
+## Contributing
 
+Contributions are welcome. Before submitting any changes, please review:
+
+- [CONTRIBUTING.md](./CONTRIBUTING.md) for branch workflow, file naming conventions, and PR requirements.
+- [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md) for community standards.
+
+Direct pushes to `main` are restricted; all contributions must be submitted through pull requests.
+
+---
+
+## License
+
+This project is licensed under the [MIT License](./LICENSE).
 See [LICENSE](./LICENSE).
